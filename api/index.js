@@ -3,7 +3,7 @@ let app = express();
 const VoiceResponse = require('twilio').twiml.VoiceResponse;
 
 app.route("/")
-.get((req, res) => {
+.post((req, res) => {
     const twiml = new VoiceResponse();
 
     twiml.say('Hello from your pals at Twilio! Have fun.');
